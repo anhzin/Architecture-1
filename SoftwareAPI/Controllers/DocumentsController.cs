@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+using System.Threading.Tasks;
+using System.Web.Http;
+
 
 namespace SoftwareAPI.Controllers
 {
-    public class DocumentsController : Controller
+    public class DocumentsController : ApiController
     {
         private static List<Models.Document> documents = new List<Models.Document>()
         {
@@ -14,83 +14,30 @@ namespace SoftwareAPI.Controllers
             new Models.Document{ ActorID = Guid.NewGuid(), ActorPropID = Guid.NewGuid(), ActorPropTitle = "Doc2", Number = 2},
             new Models.Document{ ActorID = Guid.NewGuid(), ActorPropID = Guid.NewGuid(), ActorPropTitle = "Doc3", Number = 3}
         };
-        // GET: Documents
-        public ActionResult Index()
+        // GET: api/Documents
+        public async Task<List<Models.Document>> Get()
         {
-            
-            return View(documents);
+            return documents;
+        }
+        // GET: api/Doc/5
+        public Models.Document Get(int id)
+        {
+            return documents[id];
         }
 
-        // GET: Documents/Details/5
-        public ActionResult Details(int id)
+        // POST: api/Doc
+        public void Post([FromBody]string value)
         {
-            return View(documents[id]);
         }
 
-        // GET: Documents/Create
-        public ActionResult Create()
+        // PUT: api/Doc/5
+        public void Put(int id, [FromBody]string value)
         {
-            return View();
         }
 
-        // POST: Documents/Create
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        // DELETE: api/Doc/5
+        public void Delete(int id)
         {
-            try
-            {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Documents/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View(documents[id-1]);
-        }
-
-        // POST: Documents/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-             //   var ActorID = collection.GetValue("ActorID").RawValue;
-                var ActorPropTitle = collection.GetValue("ActorPropTitle").RawValue;
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Documents/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Documents/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
         }
     }
 }

@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intercafes", "Intercafes\Intercafes.csproj", "{790181CA-B5C1-425A-A889-446621739521}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intercafes", "Intercafes\Intercafes.csproj", "{790181CA-B5C1-425A-A889-446621739521}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractClasses", "AbstractClasses\AbstractClasses.csproj", "{B45A2633-06D7-4737-B1D2-DF7193997323}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractClasses", "AbstractClasses\AbstractClasses.csproj", "{B45A2633-06D7-4737-B1D2-DF7193997323}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImplementationClasses", "ImplementationClasses\ImplementationClasses.csproj", "{222DFB8A-8662-4E65-875F-47F68AF16A8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImplementationClasses", "ImplementationClasses\ImplementationClasses.csproj", "{222DFB8A-8662-4E65-875F-47F68AF16A8C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftwareAPI", "SoftwareAPI\SoftwareAPI.csproj", "{146DBD2B-5045-4F99-BF96-AB0419617617}"
 EndProject
