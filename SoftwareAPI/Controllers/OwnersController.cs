@@ -5,6 +5,7 @@ using System.Web.Http;
 
 namespace SoftwareAPI.Controllers
 {
+    [Authorize]
     public class OwnersController : ApiController
     {
         private static List<Models.Owner> owners = new List<Models.Owner>()

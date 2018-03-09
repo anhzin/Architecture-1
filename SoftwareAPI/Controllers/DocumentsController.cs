@@ -6,6 +6,7 @@ using System.Web.Http;
 
 namespace SoftwareAPI.Controllers
 {
+    [Authorize]
     public class DocumentsController : ApiController
     {
         private static List<Models.Document> documents = new List<Models.Document>()
